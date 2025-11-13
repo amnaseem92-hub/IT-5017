@@ -1,0 +1,1017 @@
+﻿/* ====== GLOBAL RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Calibri, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #222;
+}
+
+/* ===== Header Section ===== */ ====== */
+/* ===== Header (Final Simplified Responsive Version) ===== */
+.header {
+    background: #004aad;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+    /* All buttons same by default */
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-weight: 500;
+    }
+
+        /* Hover & Active (same for all including Book Now) */
+        .nav a:hover,
+        .nav a.active {
+            background: #ffcc00;
+            color: #002b5b;
+            font-weight: 600;
+        }
+
+        /* Book Now only looks slightly more important when hovered */
+        .nav a.book-btn {
+            border: none; /* remove yellow outline */
+            background: transparent;
+        }
+
+            .nav a.book-btn:hover,
+            .nav a.book-btn.active {
+                background: #ffcc00;
+                color: #002b5b;
+                font-weight: 600;
+            }
+
+/* ===== Responsive Header ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        .nav a {
+            padding: 6px 14px;
+        }
+
+            .nav a:hover,
+            .nav a.active {
+                background: #ffcc00;
+                color: #002b5b;
+            }
+}
+
+/* ====== PAGE HEADER ====== */
+.page-header {
+    background: #cce0ff;
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+    .page-header h1 {
+        color: #002b5b;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .page-header p {
+        color: #0b347a;
+        font-size: 1rem;
+    }
+
+/* ===== Quick Search Section ===== */
+.quick-search {
+    background: #ffffff;
+    text-align: left;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid #d9e6ff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+    /* Section title */
+    .quick-search h2 {
+        color: #004aad;
+        border-bottom: 1px solid #d0e0ff;
+        padding-bottom: 8px;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+/* Flex layout for fields */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* Each dropdown group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;
+    min-width: 220px;
+}
+
+    .form-group label {
+        color: #004aad;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+/* Dropdown style */
+.search-form select {
+    padding: 10px 12px;
+    border: 1px solid #b8d0ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #004aad 50%), linear-gradient(135deg, #004aad 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+
+    .search-form select:focus {
+        border-color: #004aad;
+        box-shadow: 0 0 4px rgba(0, 74, 173, 0.3);
+    }
+
+/* Search button */
+.search-form button {
+    background: #ffcc00;
+    color: #002b5b;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .search-form button:hover {
+        background: #e6b800;
+        transform: translateY(-2px);
+    }
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+}
+
+
+/* ====== WHY CHOOSE US ====== */
+.why-choose {
+    background: #fffce8;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+    .why-choose h2 {
+        color: #003c8f;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-card {
+    background: #fffbea;
+    border: 2px solid #ffd54f;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .why-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 15px rgba(0, 91, 255, 0.2);
+    }
+
+.why-icon {
+    background: #003c8f;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #002b5b;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ====== FEATURED TOURS ====== */
+.featured-tours {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+    .featured-tours h2 {
+        color: #002b5b;
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+.tour-grid,
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff7db;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.tour-card {
+    background: #f7faff;
+    border: 2px solid #ffd54f;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .tour-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 16px rgba(0, 91, 255, 0.2);
+    }
+
+    .tour-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+.tour-content {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b8d0ff;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .tour-content h3 {
+        color: #003c8f;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+.tour-location,
+.tour-duration {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.tour-desc {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 8px 0 10px;
+    flex-grow: 1;
+}
+
+.tour-price {
+    color: #003c8f;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.tour-content select:focus {
+    border-color: #0056d6;
+    box-shadow: 0 0 4px rgba(0, 91, 255, 0.3);
+}
+
+.tour-content button {
+    width: 100%;
+    background: #ffca00;
+    border: none;
+    border-radius: 6px;
+    color: #002b5b;
+    font-weight: 600;
+    padding: 12px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .tour-content button:hover {
+        background: #ffb703;
+        transform: translateY(-2px);
+    }
+
+/* ===== Contact Page Section ===== */
+.contact-section {
+    background: #fff7db; /* light yellow background */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+    /* Center the entire block on screen */
+    .contact-section > div {
+        margin: 0 auto;
+    }
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Contact column layout */
+.contact-form,
+.contact-info,
+.credibility {
+    background: #e8f0ff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    /*margin: 0 auto;
+    width: 100%;
+    max-width: 500px;*/
+}
+
+/* Make right section stack naturally */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /*justify-content: flex-start;*/
+}
+
+.contact-info .info-box {
+    background: #fff;
+    border: 1px solid #d7e3fc;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    /* simplified: box-shadow removed for student-level */
+    /* box-shadow : 0 4px 10px rgba(0, 0, 0, 0.05);*/
+}
+
+.contact-info h2 {
+    color: #004aad;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+    .credibility h2 {
+        color: #004aad;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+.credibility-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.cred-item {
+    background: #ffffff;
+    border: 1px solid #d7e3fc;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    color: #004aad;
+    /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Footer Section ===== */ ====== */
+.footer {
+    background: #004aad;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .footer h3 {
+        color: #ffcc00;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 0.95rem;
+        color: #e8eaf6;
+        margin-bottom: 10px;
+    }
+
+    .footer a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+        .footer a:hover {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        }
+
+.footer-links {
+    margin: 15px 0;
+    font-size: 0.95rem;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #cfd8dc;
+}
+
+/* ====== RESPONSIVE FOOTER ====== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+    .footer-links a {
+        display: block;
+        margin: 6px 0;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-right {
+        flex-direction: column;
+    }
+
+    .tours-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-form,
+    .contact-info,
+    .credibility {
+        max-width: 600px;
+        width: 90%;
+    }
+}
+
+/* --- Fix spacing & styling for tour card select + button --- */
+.tour-card .tour-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* consistent vertical spacing between all blocks */
+}
+
+    .tour-card .tour-content .tour-desc {
+        flex-grow: 1; /* keeps actions at bottom */
+        margin: 0; /* avoid extra collapse */
+    }
+
+    .tour-card .tour-content select {
+        height: 40px;
+        padding: 8px 12px;
+        border: 1px solid #b8d0ff;
+        border-radius: 6px;
+        font-size: .95rem;
+        outline: none;
+        margin: 0; /* remove stray margins from global form styles */
+        appearance: none; /* keeps select compact & consistent */
+    }
+
+        .tour-card .tour-content select:focus {
+            border-color: #0056d6;
+            /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 0 4px rgba(0,91,255,.25);
+        }
+
+    .tour-card .tour-content button {
+        width: 100%;
+        margin-top: 2px; /* small offset after the select */
+        padding: 12px 0;
+        border-radius: 6px;
+        background: #ffcc00;
+        color: #002b5b;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: background .25s ease, transform .2s ease;
+    }
+
+        .tour-card .tour-content button:hover {
+            background: #e6b800;
+            transform: translateY(-2px);
+        }
+
+    /* ---- Restore dropdown arrow indicator ---- */
+    .tour-card .tour-content select {
+        background-image: linear-gradient(45deg, transparent 50%, #004aad 50%), linear-gradient(135deg, #004aad 50%, transparent 50%);
+        background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+        appearance: none; /* removes default OS arrow */
+        -webkit-appearance: none; /* Safari fix */
+        -moz-appearance: none; /* Firefox fix */
+        padding-right: 30px; /* space for arrow */
+        cursor: pointer;
+    }
+
+        /* Optional: subtle hover state */
+        .tour-card .tour-content select:hover {
+            border-color: #0056d6;
+        }
+
+/* --- CONTACT FORM FIX: restore input, select, textarea, and button styles --- */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #004aad;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b8d0ff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s ease, /* simplified: box-shadow removed for student-level */
+/* box-shadow */ 0.2s ease;
+}
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        border-color: #0056d6;
+        /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 0 4px rgba(0, 91, 255, 0.3);
+    }
+
+/* --- Contact Form Dropdown Arrow --- */
+.contact-form select {
+    background-image: linear-gradient(45deg, transparent 50%, #004aad 50%), linear-gradient(135deg, #004aad 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+/* --- Contact Form Button --- */
+.contact-form button {
+    background: #ffcc00;
+    border: none;
+    color: #002b5b;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+    .contact-form button:hover {
+        background: #e6b800;
+    }
+
+.contact-form h2 {
+    color: #004aad;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* ---- TOUR FILTER FIX ---- */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f3f8ff; /* subtle blue background like original */
+    padding: 30px 20px;
+    border-radius: 10px;
+    /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-box {
+    background: #ffffff;
+    border: 1px solid #d7e3fc;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 250px;
+    /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 3px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .filter-box label {
+        color: #004aad;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .filter-box select {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #b8d0ff;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        outline: none;
+        background-color: #fff;
+        cursor: pointer;
+        /* custom dropdown arrow */
+        background-image: linear-gradient(45deg, transparent 50%, #004aad 50%), linear-gradient(135deg, #004aad 50%, transparent 50%);
+        background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 30px;
+    }
+
+        .filter-box select:focus {
+            border-color: #0056d6;
+            /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 0 4px rgba(0, 91, 255, 0.25);
+        }
+
+/* === TOURS PAGE: Filter cards exactly like the screenshot === */
+.tours-page .filter-section {
+    background: #f5f9ff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.tours-page .filter-box {
+    background: #fff;
+    border: 1px solid #d7e3fc;
+    border-radius: 14px;
+    /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 6px 14px rgba(0,64,170,.08);
+    width: 320px; /* card width like your image */
+    max-width: 96%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .tours-page .filter-box label {
+        color: #0b3e91;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    /* Dropdown inside each card */
+    .tours-page .filter-box select {
+        height: 42px;
+        padding: 10px 36px 10px 12px; /* room for arrow */
+        border: 1px solid #b8d0ff;
+        border-radius: 8px;
+        font-size: .95rem;
+        outline: 0;
+        background: #fff;
+        /* custom ▼ arrow (cross-browser) */
+        background-image: linear-gradient(45deg,transparent 50%,#004aad 50%), linear-gradient(135deg,#004aad 50%,transparent 50%);
+        background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+        .tours-page .filter-box select:focus {
+            border-color: #0056d6;
+            /* simplified: box-shadow removed for student-level */
+/* box-shadow */: 0 0 0 3px rgba(0,86,214,.15);
+        }
+
+/* === RESPONSIVE HEADER NAVIGATION === */
+
+/* Base layout (desktop/tablet) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004aad;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+        .nav a.active,
+        .nav a:hover {
+            background: #ffcc00;
+            color: #002b5b;
+            font-weight: 600;
+        }
+
+/* ---- Small screen (mobile) view ---- */
+/* ===== Mobile View ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        flex-direction: row; /* make it a row again on mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        .nav a {
+            padding: 6px 12px;
+            background: transparent;
+        }
+
+            .nav a.active {
+                background: #ffcc00;
+                color: #002b5b;
+            }
+
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Readability overlay */
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,.30);
+        z-index: 1;
+    }
+
+/* Centered text that scales with screen width */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.6);
+    padding: 0 16px;
+}
+
+    /* Use clamp so it’s responsive without many media queries */
+    .hero-text h1 {
+        margin: 0;
+        font-weight: 800;
+        line-height: 1.15;
+        font-size: clamp(1.2rem, 5vw, 3rem); /* phones → desktops */
+    }
+
+    .hero-text p {
+        margin-top: 10px;
+        font-weight: 600;
+        color: #f0f8ff;
+        font-size: clamp(.9rem, 2.5vw, 1.2rem);
+        padding-bottom:5px;
+    }
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.1rem;
+    }
+}
+/* ===== Footer (restore dark blue + centered) ===== */
+.footer {
+    background: #004aad !important; /* flat dark blue */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .footer .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center all items */
+        gap: 8px;
+    }
+
+    .footer h3 {
+        color: #ffcc00;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    .footer p {
+        font-size: 0.95rem;
+        color: #e8eaf6;
+        margin: 4px 0;
+    }
+
+    .footer .footer-links {
+        margin: 10px 0;
+    }
+
+        .footer .footer-links a {
+            display: inline-block;
+            margin: 0 12px;
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color .2s ease;
+        }
+
+            .footer .footer-links a:hover {
+                color: #ffffff;
+            }
+
+/* small screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 16px;
+    }
+
+        .footer .footer-links a {
+            margin: 6px 10px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+}
