@@ -425,6 +425,14 @@ body {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
+.info-box:hover {
+    /* Changes on Hover */
+    background-color: #e0f7fa; /* Change background to a light blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+    transform: translateY(-3px); /* Slightly lift the box */
+    border-color: #00bcd4; /* Change border color */
+}
+
     .credibility h2 {
         color: #003c8f;
         font-size: 1.2rem;
@@ -446,6 +454,16 @@ body {
     color: #003c8f;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
+
+    /* 2. The :hover effect */
+    .cred-item:hover {
+        /* Changes on Hover */
+        background-color: #f0f8ff; /* Change background to a very light blue */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a noticeable shadow */
+        color: #0066cc; /* Change text color to a darker blue */
+        border-color: #0066cc; /* Change border color to match text */
+        transform: scale(1.02); /* Slightly increase the size of the item */
+    }
 
 /* --------- FOOTER --------- */
 .footer {
